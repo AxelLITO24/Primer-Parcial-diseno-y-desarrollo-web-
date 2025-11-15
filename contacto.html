@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha Personal, Axel Rubenacker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+
+  <main class="container ficha-container">
+    
+    <div class="ficha-header">
+      <div class="ficha-title-group">
+        <h1 class="ficha-title">Ficha Personal</h1>
+        <p class="ficha-subtitle">Perfil de Estudiante</p>
+      </div>
+      <button id="btnColorSitio" class="btn-modo">Cambiar Color</button>
+    </div>
+
+    <div class="ficha-body">
+      
+      <div class="profile-section">
+        <img class="profile-pic" src="perfil.jpeg" alt="Foto de perfil" />
+        <h2 class="profile-name">Axel Rubenacker</h2>
+      </div>
+
+      <nav class="nav ficha-nav">
+        <ul>
+          <li><a href="index.html" class="nav-btn">HOME</a></li>
+          <li><a href="contacto.html" class="nav-btn">Contacto</a></li>
+          <li><a href="https://axellito24.github.io/2da-entrega/" target="_blank" class="nav-btn">Local Comercial-Pcs Gamers</a></li>
+          <li><a href="https://axellito24.github.io/southpark-fanpagl-terminado/" target="_blank" class="nav-btn">Fan Page-South Park</a></li> 
+        </ul>
+      </nav>
+
+      <h3 class="contact-title">Contacto</h3>
+      
+      <form id="contacto-form" class="form-style-two-col">
+        
+        <div class="form-group">
+          <label for="nombre">Nombre y apellido</label>
+          <input type="text" id="nombre" name="nombre" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        
+
+        <div class="form-group full-width-form"> 
+          <label for="comentario">Comentario</label>
+          <textarea id="comentario" name="comentario"></textarea>
+        </div>
+
+        <p id="formStatus" class="server-message full-width-form"></p>
+
+      <div class="form-buttons full-width-form">
+      <button type="button" id="btnEnviar" class="submit-button enviar-btn">Enviar</button>
+      <button type="reset" id="btnLimpiar" class="submit-button limpiar-btn">Borrar</button>
+    </div>
+
+        
+
+      </form>
+    </div> <div class="ficha-footer">
+      <div class="footer-left">
+        <img src="uade.png" alt="Logo UADE" class="uade-logo-small" />
+        <p>2025/ Todos los derechos reservados</p>
+      </div>
+      <a href="https://github.com/AxelLITO24" target="_blank" class="repo-link">
+        <span class="repo-text">Mi GitHub</span>
+      </a>
+    </div>
+
+  </main>
+</body>
+</html>

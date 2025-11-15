@@ -1,0 +1,402 @@
+
+:root {
+  /* Cambie los colores, pero no sus nombres para aprovechar el tiempo */
+  --color-primary-dark: #4fc3c7; 
+  --color-primary-light: #7a5a3a; 
+  --color-gradient-start: #5c422a;
+  --color-gradient-end: #cfa875;
+
+  --color-background-page: #f0f0f5; 
+  --color-background-card: #ffffff;
+  --color-text-dark: #333333;
+  --color-text-light: #ffffff;
+  --color-link: #1111;
+  
+  --font-sp: 'South Park Studios', sans-serif;
+
+  --border-radius-large: 15px;
+  --border-radius-small: 8px;
+
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  var(--font-sp), sans-serif;
+  background-color: var(--color-background-page);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+.container {
+   
+    width: 100%; 
+    max-width: none; /* Aseguramos que no haya un límite de ancho */
+    margin: 0; /* Eliminamos los márgenes externos */
+    padding: 0; /* Mantenemos el padding externo en cero */
+}
+
+
+body {
+    margin: 0; /* Importante para eliminar el margen predeterminado del body */
+}
+
+
+
+
+.ficha-container {
+    background-color: var(#ffffff);
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Importante para contener los bordes redondeados */
+}
+
+/* Encabezado Superior (Morado con Degradado) */
+.ficha-header {
+    background: linear-gradient(90deg, var(--color-primary-dark) 0%, var(--color-gradient-end) 100%);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--color-text-light);
+    font-family: var(--font-sp);
+}
+
+.ficha-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.ficha-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-text-light);
+    margin: 0;
+    text-align: left;
+}
+
+.ficha-subtitle {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin: 0;
+    text-align: left;
+}
+
+/* Cuerpo de la Ficha (Contenido) */
+.ficha-body {
+    padding: 30px 40px;
+}
+
+
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid var(--color-primary-light);
+}
+
+.profile-name {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+    font-family: var(--font-sp);
+}
+
+/* Navegación de Botones */
+.ficha-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.nav-btn {
+    background-color: var(--color-background-card);
+    color: var(--color-text-dark);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: var(--border-radius-small);
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #f5f5f5;
+    border-color: var(--color-primary-light);
+    color: var(--color-primary-light);
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.data-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: var(--border-radius-small);
+    border: 1px solid #eee;
+}
+
+.data-label {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    margin-bottom: 5px;
+}
+
+.data-value {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+
+.contact-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-style-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    ;
+}
+
+.form-group label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-small);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary-light);
+    outline: none;
+}
+
+.form-style-two-col .full-width-form {
+    grid-column: 1 / 3;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Estilo de botones de envío/limpieza (Tomado de tu diseño anterior, ajustando el tamaño) */
+.submit-button {
+    width: 120px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.enviar-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.limpiar-btn {
+    background-color: red;
+    color: white;
+}
+
+/* Mensaje de estado del formulario */
+.server-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+.ficha-footer {
+    background-color: #f7f7f7;
+    padding: 15px 40px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.uade-logo-small {
+    height: 25px;
+}
+
+.repo-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.repo-link:hover {
+    color: var(--color-primary-light);
+}
+
+/* Botón de Modo Oscuro (se mantiene el ID #btnColorSitio) */
+.btn-modo {
+    background: none;
+    border: none;
+    color: var(--color-text-light); /* En el header morado */
+    cursor: pointer;
+    font-size: 1.5em; /* Simula un ícono de luna */
+}
+
+/* --- MODO OSCURO --- */
+
+.modo-oscuro body {
+    background-color: #222222;
+}
+
+.modo-oscuro .ficha-container {
+    background-color: #333333;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+.modo-oscuro .ficha-header {
+    background: linear-gradient(90deg, #1e0033 0%, #3a0066 100%);
+}
+
+.modo-oscuro .btn-modo {
+    color: #f5f5f5;
+}
+
+.modo-oscuro .profile-name,
+.modo-oscuro .contact-title,
+.modo-oscuro .data-value {
+    color: #f5f5f5;
+}
+
+.modo-oscuro .data-item {
+    background-color: #444444;
+    border-color: #555555;
+}
+
+.modo-oscuro .nav-btn {
+    background-color: #444444;
+    color: #f5f5f5;
+    border-color: #555555;
+}
+
+.modo-oscuro .nav-btn:hover {
+    background-color: #555555;
+    border-color: var(--color-primary-light);
+}
+
+.modo-oscuro .ficha-footer {
+    background-color: #2b2b2b;
+    border-top-color: #444444;
+    color: #cccccc;
+}
+
+.modo-oscuro .repo-link {
+    color: #cccccc;
+}
+
+.modo-oscuro .form-group input,
+.modo-oscuro .form-group textarea {
+    background-color: #555555;
+    border-color: #777777;
+    color: #f5f5f5;
+}
+
+
+  /* Responsive */
+
+@media (max-width: 700px) {
+    .ficha-body, .ficha-footer {
+        padding: 20px;
+    }
+
+    .data-grid, .form-style-two-col {
+        grid-template-columns: 1fr; /* Apila las columnas */
+    }
+
+    .ficha-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-btn {
+        flex-grow: 1; /* Permite que los botones crezcan en móvil */
+        text-align: center;
+    }
+
+    .ficha-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .ficha-title, .ficha-subtitle {
+        text-align: center;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .profile-pic {
+        margin: 0 0 10px 0;
+    }
+    
+    .ficha-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
